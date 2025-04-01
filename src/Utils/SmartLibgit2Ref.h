@@ -291,7 +291,7 @@ public:
 			return ret;
 		}
 
-		value = CUnicodeUtils::GetUnicode(buf->ptr);
+		value = CUnicodeUtils::GetUnicode(std::string_view(buf->ptr, buf->size));
 
 		return 0;
 	}
